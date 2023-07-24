@@ -16,6 +16,7 @@ from .multi_group_direct_lingam import MultiGroupDirectLiNGAM
 from .multi_group_rcd import MultiGroupRCD
 from .rcd import RCD
 from .resit import RESIT
+from .resit_prior import RESIT_PRIOR
 from .var_lingam import VARBootstrapResult, VARLiNGAM
 from .varma_lingam import VARMABootstrapResult, VARMALiNGAM
 
@@ -35,6 +36,7 @@ __all__ = [
     "RCD",
     "CAMUV",
     "RESIT",
+    "RESIT_PRIOR",
     "LiM",
     "CausalBasedSimulator",
     "MultiGroupRCD",

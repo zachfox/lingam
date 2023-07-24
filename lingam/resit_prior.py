@@ -60,8 +60,9 @@ class RESIT_PRIOR(_BaseLiNGAM):
         super().__init__(random_state)
         self._alpha = alpha
         self._reg = regressor
+        self._prior = prior_knowledge
 
-    def fit(self, X, prior_knowledge):
+    def fit(self, X):
         """Fit the model to X.
 
         Parameters
@@ -81,7 +82,7 @@ class RESIT_PRIOR(_BaseLiNGAM):
         n_features = X.shape[1]
 
         # Determine topological order
-        pa, pi = self._estimate_order(X, prior_knowledge)
+        pa, pi = self._estimate_order(X, self._prior)
 
         # Remove superfluous edges
         pa = self._remove_edges(X, pa, pi)
